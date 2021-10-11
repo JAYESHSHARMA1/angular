@@ -1,0 +1,14 @@
+.vcenter-item {
+  display: flex;
+  align-items: center;
+}
+/* Some custom styles to beautify this example */
+.wrapper {
+  /* background: #dbdfe5; */
+  height: 100vh !important;
+}
+.box {
+  padding: 25px;
+  /* background: #abb1b8; */
+  width: 100%;
+}

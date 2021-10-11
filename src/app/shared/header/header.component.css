@@ -1,0 +1,43 @@
+.navbar {
+  border-radius: 10px;
+  float: none; /* Added */
+  margin: 10px; /* Added */
+  box-shadow: 0px 0.1px 8px 0;
+}
+.search-bar {
+  border-radius: 20px;
+}
+
+.big {
+  height: 50px;
+  width: 50px;
+}
+
+.color-white {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.header-icon:hover > .nav-link > i-feather {
+  color: white;
+  transition: 0.5s all;
+}
+
+.story-box {
+  max-width: 50px !important;
+  /* background-color: aqua; */
+}
+.dropdown-avatar {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.avatar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 20px !important;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}

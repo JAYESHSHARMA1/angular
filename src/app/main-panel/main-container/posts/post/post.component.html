@@ -1,0 +1,64 @@
+<div class="card sidebar-card pt-3 my-2 mx-2">
+    <div class="story-box d-flex vertical-align-middle">
+        <img src="/assets/profile.png" class="profile-icon" alt="avatar">
+        <!-- <div class="text-center">Tony Stark</div> -->
+        <div class="row post-card-owner p-0 vertical-align-middle">
+            <div class="col m-0 p-0 vertical-align-middle">
+                <h6 class="post-card-title">Jay Sharma</h6>
+                <p class="text-muted post-time-text text-small">2 days ago</p>
+            </div>
+        </div>
+        <div class="row post-card-owner p-0 post-right-menu">
+            <div class="col m-2 p-0 vertical-align-middle ">
+                <a routerLink="#" class="card-action-text">
+                    <i-feather name="more-vertical"></i-feather>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body mt-0">
+        <img [src]="post.resourceUrls[0]" class="image-post" alt="avatar">
+    </div>
+    <div class="card-body p-4">
+        <!-- <h5 class="card-title">Card title</h5> -->
+        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+        <p class="card-text">{{post.description}}</p>
+        <!-- <a href="#" class="card-link">Another link</a> -->
+        <br />
+        <blockquote class="blockquote mb-0 text-muted">
+            <footer class="blockquote-footer"><cite title="Source Title">{{post.meta.likes}} likes
+                    {{post.control.isCommentsEnabled ? ('& '+post.meta.comments +' Comments'):''}} </cite>
+            </footer>
+        </blockquote>
+    </div>
+    <div class="card-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="#" (click)="handleLikeClick()" class="card-action-text">
+                        <i-feather name="heart" [class]="isLiked ? 'red-heart':''"></i-feather>
+                        {{isLiked ? "Liked":"Like"}}
+                    </a>
+                </div>
+                <div *ngIf="post.control.isCommentsEnabled === true" class="col text-center">
+                    <a href="#" class="card-action-text">
+                        <i-feather name="message-circle" class=""></i-feather>
+                        Comments
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a routerLink="/like" class="card-action-text">
+                        <i-feather name="share-2" class=""></i-feather>
+                        Share
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a routerLink="/like" class="card-action-text">
+                        <i-feather name="bookmark" class=""></i-feather>
+                        Save
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
